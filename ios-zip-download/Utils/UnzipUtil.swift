@@ -18,7 +18,7 @@ final class UnzipUtil: NSObject {
     var delegate: UnZipDelegate?
 
     //TODO : パスワード
-    let pwd = "sdt"
+    let pwd = ""
 
     func unzip(destinationPath: String, fileName: String) {
 

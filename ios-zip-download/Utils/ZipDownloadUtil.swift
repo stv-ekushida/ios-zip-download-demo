@@ -17,7 +17,7 @@ final class ZipDownloadUtil: NSObject {
     var delegate: ZipDownloadDelegate?
 
     //TODO : URLを設定する
-    private let baseURLString = "http://smartdt.sakura.ne.jp/SDTDEV/MangaBank/manga/"
+    private let baseURLString = ""
     private var session: URLSession?
     private var downloadTask: URLSessionDownloadTask?
 
