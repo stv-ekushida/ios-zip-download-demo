@@ -4,7 +4,7 @@
 target 'ios-zip-download' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  pod 'SSZipArchive', '<= 1.2'
+  pod 'SSZipArchive', '<= 1.6.2'
 
   # Pods for ios-zip-download
 

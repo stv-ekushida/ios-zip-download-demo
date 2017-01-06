@@ -18,26 +18,19 @@ final class UnzipUtil: NSObject {
     var delegate: UnZipDelegate?
 
     //TODO : パスワード
-    let pwd = ""
+    let pwd = "sdt"
 
     func unzip(destinationPath: String, fileName: String) {
 
-        var error: NSError?
         SSZipArchive.unzipFile(atPath: destinationPath + "/\(fileName)",
             toDestination: DirectoryUtil().saveAppPath(),
             overwrite: true,
             password: pwd,
-            error: &error,
-            delegate: self)
-    }
-}
+            progressHandler: { (entry, zipInfo, entryNumber, total) in
 
-//MARK:- SSZipArchiveDelegate
-extension UnzipUtil: SSZipArchiveDelegate {
+        }, completionHandler: { [weak self] (path, succeeded, error) in
 
-    func zipArchiveDidUnzipArchive(atPath path: String!,
-                                   zipInfo: unz_global_info,
-                                   unzippedPath: String!) {
-        delegate?.didUnZipFile(unzippedPath: unzippedPath)
+            self?.delegate?.didUnZipFile(unzippedPath: path)
+        })
     }
 }
