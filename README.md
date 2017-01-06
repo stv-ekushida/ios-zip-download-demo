@@ -1,5 +1,5 @@
 # ios-zip-download-demo
-ios - Zipファイルをダウンロードして解凍するサンプル
+ios - Zipファイルをダウンロードして解凍(パスワード付き）するサンプル
 
 |Category | Version| 
 |---|---|
