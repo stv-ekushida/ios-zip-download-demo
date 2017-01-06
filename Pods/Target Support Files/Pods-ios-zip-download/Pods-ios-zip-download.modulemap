@@ -1,0 +1,6 @@
+framework module Pods_ios_zip_download {
+  umbrella header "Pods-ios-zip-download-umbrella.h"
+
+  export *
+  module * { export * }
+}
